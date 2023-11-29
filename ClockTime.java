@@ -97,9 +97,9 @@ public class ClockTime
         int hour12 = hour % 12;
         
         if(hour > 12) {
-            return String.format("%02d", hour12) + ":" + minute + ":" + second + pm; 
+            return String.format("%02d", hour12) + ":" + String.format("%02d", minute) + ":" + String.format("%02d", second) + pm; 
         }
-        return String.format("%02d", hour12) + ":" + minute + ":" + second + am;
+        return String.format("%02d", hour12) + ":" + String.format("%02d", minute) + ":" + String.format("%02d", second) + am;
     }
     
     public void advance(int x) {
